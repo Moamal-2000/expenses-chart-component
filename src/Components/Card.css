@@ -1,0 +1,34 @@
+.card {
+  width: 500px;
+  position: relative;
+  top: -1000px;
+  animation: move-down 2s .4s ease-in-out 1 forwards;
+  -webkit-animation: move-down 2s .4s ease-in-out 1 forwards;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 450px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes move-down {
+  80% {
+    top: 40px;
+  }
+
+  100% {
+    top: 0;
+  }
+}

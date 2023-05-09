@@ -1,0 +1,86 @@
+.statistics {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .statistics {
+    gap: 8px;
+  }
+}
+
+.statistics .state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.statistics .state::before {
+  content: attr(data-amount);
+  position: absolute;
+  top: -36px;
+  background-color: var(--dark-brown);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -ms-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .statistics .state::before {
+    padding: 4px;
+    top: -30px;
+  }
+}
+
+.statistics .state:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.statistics .state .draw {
+  background-color: #ec755d;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+}
+
+.statistics .state:hover .draw {
+  opacity: 0.5;
+}
+
+.statistics .state .draw.highest {
+  background-color: var(--cyan);
+}
+
+.statistics .state span {
+  display: block;
+  font-size: 16px;
+  color: var(--medium-brown);
+}

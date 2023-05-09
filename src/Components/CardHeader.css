@@ -1,0 +1,83 @@
+.card .header {
+  background-color: #ec775f;
+  color: #fffaf5;
+  padding: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+  .card .header {
+    padding: 20px;
+  }
+}
+
+.card .header .content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card .header .content .text {
+  font-size: 15px;
+}
+
+.card .header .content .price {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.card .header .logo {
+  user-select: none;
+}
+
+.card .header .logo {
+  width: 48px;
+  height: 48px;
+  border: solid 3px #fffaf5;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+  right: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .card .header .logo {
+    right: 20px;
+  }
+}
+
+.card .header .logo::before {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  translate: 5px -50%;
+  background-color: var(--dark-brown);
+  width: 112%;
+  height: 112%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  animation: logo 0.5s 2.5s ease-in-out forwards;
+  -webkit-animation: logo 0.5s 2.5s ease-in-out forwards;
+}
+
+
+@keyframes logo {
+  to {
+    right: -50%;
+  }
+}

@@ -1,0 +1,60 @@
+.body-card {
+  background-color: #fffcf7;
+  color: var(--dark-brown);
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  padding: 26px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .body-card {
+    padding: 20px;
+  }
+}
+
+.body-card .spending {
+  font-size: 28px;
+}
+
+.body-card .line {
+  display: block;
+  height: 1px;
+  background-color: #38231429;
+  margin: 20px 0;
+  user-select: none;
+}
+
+.body-card .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body-card .footer .total-container .total-msg {
+  color: var(--medium-brown);
+  font-size: 16px;
+}
+
+.body-card .footer .total-container .total-price {
+  font-size: 42px;
+}
+
+.body-card .footer .last-month {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.body-card .footer .last-month .percentage {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.body-card .footer .last-month .text {
+  color: var(--medium-brown);
+  font-size: 16px;
+}
