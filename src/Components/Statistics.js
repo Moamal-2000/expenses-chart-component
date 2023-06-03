@@ -7,6 +7,7 @@ const Statistics = () => {
   const [highestAmount, setHighestAmount] = useState(0);
   const amounts = cardsData.map((card) => card.amount);
 
+
   useEffect(() => {
     for (let i = 0; i < amounts.length; i++) {
       amounts[i] > highestAmount
@@ -14,6 +15,8 @@ const Statistics = () => {
         : (amounts[i] = amounts[i + 1]);
     }
   }, [highestAmount, amounts]);
+
+
   return (
     <div className="statistics">
       {cardsData.map((card) => (
