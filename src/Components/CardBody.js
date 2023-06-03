@@ -7,10 +7,13 @@ const CardBody = () => {
   const cardsData = useContext(cardsDataContext);
   let totalPrice = 0;
   let numberDays = 0
+
+
   cardsData.map((item) => {
     numberDays++
     return totalPrice += item.amount
   });
+
 
   return (
     <div className="body-card">

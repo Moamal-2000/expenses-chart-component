@@ -7,7 +7,6 @@ import apiData from "../API/data.json"
 export const cardsDataContext = createContext();
 
 const Card = () => {
-  console.log();
   const [cardsData] = useState(apiData);
 
   return (
