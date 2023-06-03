@@ -1,7 +1,7 @@
 {
   "name": "react-clone",
   "version": "0.1.0",
-  "homepage": "https://moamal-2000.github.io/expenses-chart",
+  "homepage": "https://moamal-2000.github.io/expenses-chart-component",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
